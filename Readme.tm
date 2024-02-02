@@ -1,6 +1,6 @@
 Individual Project Mykola Dudko
 
-Project for Testing Kanboard 1
+Project for Testing Kanboard 12
 
 The project is created for automated testing of project management software – Kanboard. Technologies and libraries such as testNG, Selenide, Rest Assured, and Allure are used.
 
