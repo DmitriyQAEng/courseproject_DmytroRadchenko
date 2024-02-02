@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="098f40d0-a045-415e-920d-4e58c03fe833" name="Changes" comment="ds">
-      <change afterPath="$PROJECT_DIR$/we.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Readme.tm" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.tm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Elements/LoginElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Elements/ProjectElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Elements/TaskElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +42,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -80,7 +86,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706894541112</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ds">
+      <option name="closed" value="true" />
+      <created>1706894862125</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706894862125</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ds">
+      <option name="closed" value="true" />
+      <created>1706895102191</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706895102191</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
