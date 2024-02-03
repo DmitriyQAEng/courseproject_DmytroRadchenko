@@ -1,6 +1,6 @@
 <suite name="MyTest suite">
     <listeners>
-        <listener class-name="ui.methods.RetryAnalyzer"/>
+        <listener class-name="ui.methods.AnnotationTransformer"/>
     </listeners>
     <test name="ApiProjectsTests">
         <classes>

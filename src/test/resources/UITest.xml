@@ -1,6 +1,6 @@
 <suite name="UITest suite">
     <listeners>
-        <listener class-name="ui.methods.RetryAnalyzer"/>
+        <listener class-name="ui.methods.AnnotationTransformer"/>
     </listeners>
 
     <test name="TestLoginUi">
