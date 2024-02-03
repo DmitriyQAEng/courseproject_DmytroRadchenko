@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import ui.methods.RetryAnalyzer;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -13,6 +14,7 @@ import static elements.LoginElements.*;
 import static ui.steps.LoginPage.loginAsAdmin;
 
 public class LoginsUiTest extends BaseTest {
+
     @BeforeClass
     @Parameters({"browserName", "headless"})
     public void setUpClass(@Optional("firefox") String browserName, @Optional("false") boolean headless) {
@@ -20,7 +22,7 @@ public class LoginsUiTest extends BaseTest {
         Configuration.headless = headless;
     }
 
-    @Test(groups = "UiLoginsTest")
+    @Test(groups = "UiLoginsTest", retryAnalyzer = RetryAnalyzer.class)
     @Parameters({"browserName", "headless"})
     public void positiveLoginTest(@Optional("firefox") String browserName, @Optional("false") boolean headless) {
         Configuration.browser = browserName;
@@ -31,7 +33,7 @@ public class LoginsUiTest extends BaseTest {
         logOutButton().click();
     }
 
-    @Test(groups = "UiLoginsTest")
+    @Test(groups = "UiLoginsTest", retryAnalyzer = RetryAnalyzer.class)
     @Parameters({"browserName", "headless"})
     public void negativeLoginTestInvalidUsername(@Optional("chrome") String browserName, @Optional("true") boolean headless) {
         Configuration.browser = browserName;
@@ -44,7 +46,7 @@ public class LoginsUiTest extends BaseTest {
         badUsernamePasswordField().shouldHave(text("Bad username or password"));
     }
 
-    @Test(groups = "UiLoginsTest")
+    @Test(groups = "UiLoginsTest", retryAnalyzer = RetryAnalyzer.class)
     @Parameters({"browserName", "headless"})
     public void negativeLoginTestInvalidPassword(@Optional("chrome") String browserName, @Optional("false") boolean headless) {
         Configuration.browser = browserName;
@@ -57,6 +59,4 @@ public class LoginsUiTest extends BaseTest {
         badUsernamePasswordField().shouldHave(text("Bad username or password"));
     }
 }
-
-
 

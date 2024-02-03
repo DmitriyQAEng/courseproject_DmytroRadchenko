@@ -11,7 +11,7 @@ pipeline {
          string(name: 'baseUrl', description: 'Validate Application URL', defaultValue: 'http://localhost')
     }
     environment {
-        mailRecipients = 'dudkomykola@icloud.com'
+        mailRecipients = 'djdmonqa@gmail.com'
     }
     tools {
         jdk 'JDK'
