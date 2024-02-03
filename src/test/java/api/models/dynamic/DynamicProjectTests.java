@@ -6,11 +6,8 @@ public class DynamicProjectTests {
     @DataProvider(name = "projectData")
     public static Object[][] projectData() {
         return new Object[][]{
-                {"ProjectDudko1"},
-//                {"ProjectDudko2"},
-//                {"ProjectDudko3"},
-//                {"ProjectDudko4"},
-//                {"ProjectDudko5"}
+                {"TestProjectDmitro"},
+
         };
     }
 }

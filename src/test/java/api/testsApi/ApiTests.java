@@ -37,7 +37,7 @@ public class ApiTests {
                 .id(Config.getUserId())
                 .params(UserInfo.CreateUserRequest.ParamsCreate.builder()
                         .username(Config.getUserApi()).password(Config.getPasswordApi())
-                        .name(userName).role(MANAGER.getRole()).email("dudkomykola@icloud.com").build())
+                        .name(userName).role(MANAGER.getRole()).email("djdmonqa@gmail.com").build())
                 .build();
         Result result = performAuthorizedRequest(createUser);
         userResult = result.User_id();
