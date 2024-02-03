@@ -1,8 +1,7 @@
 package ui.testsUi;
 
 import api.models.dynamic.DynamicProjectTests;
-import org.testng.IRetryAnalyzer;
-import org.testng.ITestResult;
+
 import org.testng.annotations.Test;
 import ui.methods.RetryAnalyzer;
 

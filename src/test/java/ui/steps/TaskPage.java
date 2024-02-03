@@ -12,7 +12,7 @@ public class TaskPage {
         myProjects().click();
         dropdownProjectField().click();
         addNewTaskField().click();
-        nameTaskField().setValue("MykolaDudko1");
+        nameTaskField().setValue("DmytroRadchenko1");
         saveField().click();
         // Edit
         dropdownTaskField().click();
