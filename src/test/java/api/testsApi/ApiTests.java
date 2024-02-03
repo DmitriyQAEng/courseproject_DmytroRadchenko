@@ -4,11 +4,6 @@ import api.models.args.result.Result;
 import api.models.args.projects.ProjectInfo;
 import api.models.args.tasks.TaskInfo;
 import api.models.args.users.UserInfo;
-import api.models.dynamic.*;
-import config.Config;
-import io.restassured.RestAssured;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 import static api.enums.UserRoles.MANAGER;
 import static api.methods.Projects.CREATE_PROJECT;
 import static api.methods.Projects.REMOVE_PROJECT;
@@ -18,7 +13,11 @@ import static api.methods.Users.CREATE_USER;
 import static api.methods.Users.DELETE_USER;
 import static api.steps.BaseApiSteps.performAuthorizedRequest;
 import java.util.logging.Logger;
-
+import api.models.dynamic.*;
+import config.Config;
+import io.restassured.RestAssured;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 public class ApiTests {
     private static final Logger logger = Logger.getLogger(ApiTests.class.getName());
     private int userResult;
