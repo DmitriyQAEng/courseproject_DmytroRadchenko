@@ -1,4 +1,8 @@
 <suite name="ApiTest suite">
+    <listeners>
+        <listener class-name="ui.methods.RetryAnalyzer"/>
+    </listeners>
+
     <test name="ApiProjectsTests">
         <classes>
             <class name="api.testsApi.ApiTests"/>

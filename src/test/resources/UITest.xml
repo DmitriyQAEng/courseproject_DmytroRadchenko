@@ -1,4 +1,8 @@
 <suite name="UITest suite">
+    <listeners>
+        <listener class-name="ui.methods.RetryAnalyzer"/>
+    </listeners>
+
     <test name="TestLoginUi">
         <classes>
             <class name="ui.testsUi.LoginsUiTest">

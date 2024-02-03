@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="098f40d0-a045-415e-920d-4e58c03fe833" name="Changes" comment="ds">
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/steps/TaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/steps/TaskPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testsUi/ProjectsUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testsUi/ProjectsUiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/ApiTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ApiTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/FullTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/FullTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/UITest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/UITest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,16 +53,26 @@
   <component name="RunManager">
     <configuration name="ApiTests.createTaskTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="courseprojectDmytroRadchenko" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="api.testsApi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="api.testsApi" />
       <option name="MAIN_CLASS_NAME" value="api.testsApi.ApiTests" />
       <option name="METHOD_NAME" value="createTaskTest" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -146,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706971352871</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ds">
+      <option name="closed" value="true" />
+      <created>1706971613608</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706971613608</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
