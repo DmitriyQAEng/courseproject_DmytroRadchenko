@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="098f40d0-a045-415e-920d-4e58c03fe833" name="Changes" comment="ds">
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/steps/TaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/steps/TaskPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testsUi/ProjectsUiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testsUi/ProjectsUiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -30,7 +35,7 @@
     "TestNG.ApiTests.executor": "Debug",
     "TestNG.LoginsUiTest.executor": "Debug",
     "TestNG.ProjectsUiTest.executor": "Debug",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "fffuuu",
     "last_opened_file_path": "/Users/macbookdima/IdeaProjects/courseproject_DmytroRadchenko/src/test"
   }
 }]]></component>
