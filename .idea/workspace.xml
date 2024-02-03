@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="098f40d0-a045-415e-920d-4e58c03fe833" name="Changes" comment="ds">
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/steps/SessionApiSteps.java" beforeDir="false" />
-    </list>
+    <list default="true" id="098f40d0-a045-415e-920d-4e58c03fe833" name="Changes" comment="ds" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +18,7 @@
   "keyToString": {
     "TestNG.ApiTests.createTaskTest.executor": "Debug",
     "TestNG.ApiTests.executor": "Debug",
+    "TestNG.LoginsUiTest.executor": "Debug",
     "TestNG.ProjectsUiTest.executor": "Debug",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/macbookdima/IdeaProjects/courseproject_DmytroRadchenko/src/test"
@@ -113,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706967290917</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ds">
+      <option name="closed" value="true" />
+      <created>1706967670420</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706967670420</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
