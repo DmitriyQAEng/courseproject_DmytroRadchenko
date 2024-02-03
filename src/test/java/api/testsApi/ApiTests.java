@@ -9,7 +9,6 @@ import config.Config;
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import java.util.Base64;
 import static api.enums.UserRoles.MANAGER;
 import static api.methods.Projects.CREATE_PROJECT;
 import static api.methods.Projects.REMOVE_PROJECT;
@@ -17,16 +16,18 @@ import static api.methods.Tasks.CREATE_TASK;
 import static api.methods.Tasks.REMOVE_TASK;
 import static api.methods.Users.CREATE_USER;
 import static api.methods.Users.DELETE_USER;
-import static api.models.args.result.CreateResult.*;
 import static api.steps.BaseApiSteps.performAuthorizedRequest;
+import java.util.logging.Logger;
 
 public class ApiTests {
-    public static String authHeaderUser;
+    private static final Logger logger = Logger.getLogger(ApiTests.class.getName());
+    private int userResult;
+    private int projectResult;
+    private int taskResult;
+
     @BeforeMethod
     public void setUp() {
         RestAssured.baseURI = Config.getBaseUrl();
-        authHeaderUser = "Basic " + Base64.getEncoder()
-                .encodeToString((Config.getUser() + ":" + Config.getPassword()).getBytes());
     }
 
     @Test(groups = "ApiProjectsTests", priority = 1, dataProvider = "userData", dataProviderClass = DynamicUserTests.class)
@@ -41,8 +42,8 @@ public class ApiTests {
                 .build();
         Result result = performAuthorizedRequest(createUser);
         userResult = result.User_id();
-        System.out.println("Creating new User: " + userName);
-        System.out.println("User created with Result: " + userResult);
+        logger.info("Creating new User: " + userName);
+        logger.info("User created with Result: " + userResult);
     }
 
     @Test(groups = "ApiProjectsTests", priority = 2, dataProvider = "projectData", dataProviderClass = DynamicProjectTests.class)
@@ -56,12 +57,12 @@ public class ApiTests {
                 .build();
         Result result = performAuthorizedRequest(createProject);
         projectResult = result.Project_id();
-        System.out.println("Creating new Project: " + projectName);
-        System.out.println("Project created with Result: " + projectResult);
+        logger.info("Creating new Project: " + projectName);
+        logger.info("Project created with Result: " + projectResult);
     }
+
     @Test(groups = "ApiProjectsTests", priority = 3, dataProvider = "taskData", dataProviderClass = DynamicTaskTests.class)
     public void createTaskTest(String taskName) {
-        int resultProject_id = 0;
         TaskInfo.CreateTaskRequest createTask = TaskInfo.CreateTaskRequest.builder()
                 .jsonrpc("2.0")
                 .method(CREATE_TASK)
@@ -71,11 +72,12 @@ public class ApiTests {
                 .build();
         Result result = performAuthorizedRequest(createTask);
         taskResult = result.Task_id();
-        System.out.println("Creating new Task: " + taskName);
-        System.out.println("Task created with Result: " + taskResult);
+        logger.info("Creating new Task: " + taskName);
+        logger.info("Task created with Result: " + taskResult);
     }
+
     @Test(groups = "ApiProjectsTests", priority = 4)
-    public void removeTaskTest(){
+    public void removeTaskTest() {
         TaskInfo.RemoveTaskRequest removeTask = TaskInfo.RemoveTaskRequest.builder()
                 .jsonrpc("2.0")
                 .method(REMOVE_TASK)
@@ -85,11 +87,12 @@ public class ApiTests {
         Result result = performAuthorizedRequest(removeTask);
         int resultWithId = result.Task_id();
         boolean taskRemovedResult = (boolean) result.getResult();
-        System.out.println("Task removed with Result: " + resultWithId);
-        System.out.println("Task removed result: " + taskRemovedResult);
+        logger.info("Task removed with Result: " + resultWithId);
+        logger.info("Task removed result: " + taskRemovedResult);
     }
+
     @Test(groups = "ApiProjectsTests", priority = 5)
-    public void removeProjectTest(){
+    public void removeProjectTest() {
         ProjectInfo.RemoveProjectRequest removeProject = ProjectInfo.RemoveProjectRequest.builder()
                 .jsonrpc("2.0")
                 .method(REMOVE_PROJECT)
@@ -99,9 +102,10 @@ public class ApiTests {
         Result result = performAuthorizedRequest(removeProject);
         int resultWithId = result.Project_id();
         boolean projectRemovedResult = (boolean) result.getResult();
-        System.out.println("Project removed with Result: " + resultWithId);
-        System.out.println("Project removed result: " + projectRemovedResult);
+        logger.info("Project removed with Result: " + resultWithId);
+        logger.info("Project removed result: " + projectRemovedResult);
     }
+
     @Test(groups = "ApiProjectsTests", priority = 6)
     public void removeUserAsAdminTest() {
         UserInfo.RemoveUserRequest removeUser = UserInfo.RemoveUserRequest.builder()
@@ -113,8 +117,7 @@ public class ApiTests {
         Result result = performAuthorizedRequest(removeUser);
         int resultWithId = result.User_id();
         boolean userRemovedResult = (boolean) result.getResult();
-        System.out.println("User removed with Result: " + resultWithId);
-        System.out.println("User removed result: " + userRemovedResult);
+        logger.info("User removed with Result: " + resultWithId);
+        logger.info("User removed result: " + userRemovedResult);
     }
 }
-
