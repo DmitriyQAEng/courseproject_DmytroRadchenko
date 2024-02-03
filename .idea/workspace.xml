@@ -5,31 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="098f40d0-a045-415e-920d-4e58c03fe833" name="Changes" comment="ds">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jenkinsfile.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/steps/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/steps/ProjectPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/steps/TaskPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testsUi/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testsUi/LoginsUiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testsUi/ProjectsUiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ApiTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/FullTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/UITest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Elements/LoginElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/LoginElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Elements/ProjectElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/ProjectElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Elements/TaskElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/TaskElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/steps/dw.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +42,19 @@
     </key>
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="ds">
+      <option name="closed" value="true" />
+      <created>1706958101115</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706958101115</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ds" />
+    <option name="LAST_COMMIT_MESSAGE" value="ds" />
   </component>
 </project>

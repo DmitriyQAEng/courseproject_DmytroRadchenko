@@ -37,16 +37,16 @@ public class Config {
         return properties.getProperty("INVALID_USER_PASSWORD", "invalid");
     }
     public static String getUserApi(){
-        return properties.getProperty("USER_API", "dudko_3879tt15");
+        return properties.getProperty("USER_API", "dmitro");
     }
     public static String getPasswordApi(){
-        return properties.getProperty("PASSWORD_API", "00230tt515");
+        return properties.getProperty("PASSWORD_API", "dmitro");
     }
     public static String getApiLogin(){
         return properties.getProperty("API_LOGIN", "jsonrpc");
     }
     public static String getApiToken(){
-        return properties.getProperty("API_TOKEN", "cc8da32fd10d691478cab74228d753a82d0eeff5aad37a95a06bcb9e1f2e");
+        return properties.getProperty("API_TOKEN", "c8841f5c5ab7208e3c58e672b555d6250cf9f35e54c23d6c7db37a881843");
     }
     public static String getApiEndpoint(){
         return properties.getProperty("API_ENDPOINT", "/jsonrpc.php");
