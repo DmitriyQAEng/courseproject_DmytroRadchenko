@@ -23,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -32,7 +37,7 @@
     "TestNG.ApiTests.executor": "Debug",
     "TestNG.LoginsUiTest.executor": "Debug",
     "TestNG.ProjectsUiTest.executor": "Debug",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "fffuuu",
     "last_opened_file_path": "/Users/macbookdima/IdeaProjects/courseproject_DmytroRadchenko/src/test"
   }
 }]]></component>
