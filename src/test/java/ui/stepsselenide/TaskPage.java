@@ -1,9 +1,9 @@
 package ui.stepsselenide;
 
-import static elements.ProjectComponents.*;
-import static elements.ProjectComponents.saveField;
-import static elements.TaskComponents.*;
-import static elements.TaskComponents.confirmButton;
+import static ui.elements.elements.ProjectComponents.*;
+import static ui.elements.elements.ProjectComponents.saveField;
+import static ui.elements.elements.TaskComponents.*;
+import static ui.elements.elements.TaskComponents.confirmButton;
 import static ui.stepsselenide.LoginPage.loginAsAdmin;
 
 public class TaskPage {

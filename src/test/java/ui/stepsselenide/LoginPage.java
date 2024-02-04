@@ -3,7 +3,7 @@ package ui.stepsselenide;
 import config.ConfigProperties;
 
 import static com.codeborne.selenide.Selenide.open;
-import static elements.UserCredentialsComponents.*;
+import static ui.elements.elements.UserCredentialsComponents.*;
 
 
 public class LoginPage{

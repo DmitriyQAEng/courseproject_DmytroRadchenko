@@ -10,7 +10,7 @@ import ui.methods.RetryAnalyzer;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static elements.UserCredentialsComponents.*;
+import static ui.elements.elements.UserCredentialsComponents.*;
 import static ui.stepsselenide.LoginPage.loginAsAdmin;
 
 public class LoginsUiTestBase extends UITestBase {
