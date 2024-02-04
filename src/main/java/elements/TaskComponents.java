@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class TaskElements {
+public class TaskComponents {
 
     public static SelenideElement addNewTaskField(){
         return $(By.xpath("//body/div[@id='dropdown']/ul[1]/li[4]/a[1]"));

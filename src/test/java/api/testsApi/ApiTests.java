@@ -1,20 +1,20 @@
 package api.testsApi;
 
 import api.models.args.result.Result;
-import api.models.args.projects.ProjectInfo;
-import api.models.args.tasks.TaskInfo;
-import api.models.args.users.UserInfo;
-import static api.enums.UserRoles.MANAGER;
-import static api.methods.Projects.CREATE_PROJECT;
-import static api.methods.Projects.REMOVE_PROJECT;
-import static api.methods.Tasks.CREATE_TASK;
-import static api.methods.Tasks.REMOVE_TASK;
-import static api.methods.Users.CREATE_USER;
-import static api.methods.Users.DELETE_USER;
+import api.models.args.projects.ProjectDescription;
+import api.models.args.tasks.TaskDescription;
+import api.models.args.users.UserDescription;
+import static api.enums.UserRole.MANAGER;
+import static api.methods.ProjectMethods.CREATE_PROJECT;
+import static api.methods.ProjectMethods.REMOVE_PROJECT;
+import static api.methods.TaskMethods.CREATE_TASK;
+import static api.methods.TaskMethods.REMOVE_TASK;
+import static api.methods.UserMethods.CREATE_USER;
+import static api.methods.UserMethods.DELETE_USER;
 import static api.steps.BaseApiSteps.performAuthorizedRequest;
 import java.util.logging.Logger;
 import api.models.dynamic.*;
-import config.Config;
+import config.ConfigProperties;
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -26,17 +26,17 @@ public class ApiTests {
 
     @BeforeMethod
     public void setUp() {
-        RestAssured.baseURI = Config.getBaseUrl();
+        RestAssured.baseURI = ConfigProperties.getBaseUrl();
     }
 
-    @Test(groups = "ApiProjectsTests", priority = 1, dataProvider = "userData", dataProviderClass = DynamicUserTests.class)
+    @Test(groups = "ApiProjectsTests", priority = 1, dataProvider = "userData", dataProviderClass = UserTestDataProvider.class)
     public void createUserAsAdminTest(String userName) {
-        UserInfo.CreateUserRequest createUser = UserInfo.CreateUserRequest.builder()
+        UserDescription.CreateUserRequest createUser = UserDescription.CreateUserRequest.builder()
                 .jsonrpc("2.0")
                 .method(CREATE_USER)
-                .id(Config.getUserId())
-                .params(UserInfo.CreateUserRequest.ParamsCreate.builder()
-                        .username(Config.getUserApi()).password(Config.getPasswordApi())
+                .id(ConfigProperties.getUserId())
+                .params(UserDescription.CreateUserRequest.ParamsCreate.builder()
+                        .username(ConfigProperties.getUserApi()).password(ConfigProperties.getPasswordApi())
                         .name(userName).role(MANAGER.getRole()).email("djdmonqa@gmail.com").build())
                 .build();
         Result result = performAuthorizedRequest(createUser);
@@ -45,13 +45,13 @@ public class ApiTests {
         logger.info("User created with Result: " + userResult);
     }
 
-    @Test(groups = "ApiProjectsTests", priority = 2, dataProvider = "projectData", dataProviderClass = DynamicProjectTests.class)
+    @Test(groups = "ApiProjectsTests", priority = 2, dataProvider = "projectData", dataProviderClass = ProjectTestDataProvider.class)
     public void createProjectTest(String projectName) {
-        ProjectInfo.CreateProjectRequest createProject = ProjectInfo.CreateProjectRequest.builder()
+        ProjectDescription.CreateProjectRequest createProject = ProjectDescription.CreateProjectRequest.builder()
                 .jsonrpc("2.0")
                 .method(CREATE_PROJECT)
-                .id(Config.getUserId())
-                .params(ProjectInfo.CreateProjectRequest.ParamsCreate.builder().name(projectName).description("Coursework")
+                .id(ConfigProperties.getUserId())
+                .params(ProjectDescription.CreateProjectRequest.ParamsCreate.builder().name(projectName).description("Coursework")
                         .start_date("2024-01-01").end_date("2024-02-05").build())
                 .build();
         Result result = performAuthorizedRequest(createProject);
@@ -60,13 +60,13 @@ public class ApiTests {
         logger.info("Project created with Result: " + projectResult);
     }
 
-    @Test(groups = "ApiProjectsTests", priority = 3, dataProvider = "taskData", dataProviderClass = DynamicTaskTests.class)
+    @Test(groups = "ApiProjectsTests", priority = 3, dataProvider = "taskData", dataProviderClass = TaskTestDataProvider.class)
     public void createTaskTest(String taskName) {
-        TaskInfo.CreateTaskRequest createTask = TaskInfo.CreateTaskRequest.builder()
+        TaskDescription.CreateTaskRequest createTask = TaskDescription.CreateTaskRequest.builder()
                 .jsonrpc("2.0")
                 .method(CREATE_TASK)
-                .id(Config.getTaskId())
-                .params(TaskInfo.CreateTaskRequest.ParamsCreate.builder().project_id(projectResult).title(taskName)
+                .id(ConfigProperties.getTaskId())
+                .params(TaskDescription.CreateTaskRequest.ParamsCreate.builder().project_id(projectResult).title(taskName)
                         .description("Testing API").color_id("green").date_started("2024-01-18").build())
                 .build();
         Result result = performAuthorizedRequest(createTask);
@@ -77,11 +77,11 @@ public class ApiTests {
 
     @Test(groups = "ApiProjectsTests", priority = 4)
     public void removeTaskTest() {
-        TaskInfo.RemoveTaskRequest removeTask = TaskInfo.RemoveTaskRequest.builder()
+        TaskDescription.RemoveTaskRequest removeTask = TaskDescription.RemoveTaskRequest.builder()
                 .jsonrpc("2.0")
                 .method(REMOVE_TASK)
-                .id(Config.getTaskId())
-                .params(TaskInfo.RemoveTaskRequest.ParamsRemote.builder().task_id(taskResult).build())
+                .id(ConfigProperties.getTaskId())
+                .params(TaskDescription.RemoveTaskRequest.ParamsRemote.builder().task_id(taskResult).build())
                 .build();
         Result result = performAuthorizedRequest(removeTask);
         int resultWithId = result.Task_id();
@@ -92,11 +92,11 @@ public class ApiTests {
 
     @Test(groups = "ApiProjectsTests", priority = 5)
     public void removeProjectTest() {
-        ProjectInfo.RemoveProjectRequest removeProject = ProjectInfo.RemoveProjectRequest.builder()
+        ProjectDescription.RemoveProjectRequest removeProject = ProjectDescription.RemoveProjectRequest.builder()
                 .jsonrpc("2.0")
                 .method(REMOVE_PROJECT)
-                .id(Config.getProjectId())
-                .params(ProjectInfo.RemoveProjectRequest.ParamsRemote.builder().project_id(projectResult).build())
+                .id(ConfigProperties.getProjectId())
+                .params(ProjectDescription.RemoveProjectRequest.ParamsRemote.builder().project_id(projectResult).build())
                 .build();
         Result result = performAuthorizedRequest(removeProject);
         int resultWithId = result.Project_id();
@@ -107,11 +107,11 @@ public class ApiTests {
 
     @Test(groups = "ApiProjectsTests", priority = 6)
     public void removeUserAsAdminTest() {
-        UserInfo.RemoveUserRequest removeUser = UserInfo.RemoveUserRequest.builder()
+        UserDescription.RemoveUserRequest removeUser = UserDescription.RemoveUserRequest.builder()
                 .jsonrpc("2.0")
                 .method(DELETE_USER)
-                .id(Config.getUserId())
-                .params(UserInfo.RemoveUserRequest.ParamsRemote.builder().user_id(userResult).build())
+                .id(ConfigProperties.getUserId())
+                .params(UserDescription.RemoveUserRequest.ParamsRemote.builder().user_id(userResult).build())
                 .build();
         Result result = performAuthorizedRequest(removeUser);
         int resultWithId = result.User_id();

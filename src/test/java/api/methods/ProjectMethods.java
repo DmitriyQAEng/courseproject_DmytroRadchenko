@@ -1,6 +1,6 @@
 package api.methods;
 
-public class Projects {
+public class ProjectMethods {
     public final static String CREATE_PROJECT = "createProject";
     public final static String REMOVE_PROJECT = "removeProject";
 }

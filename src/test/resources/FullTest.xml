@@ -9,7 +9,7 @@
     </test>
     <test name="TestLoginUi">
         <classes>
-            <class name="ui.testsUi.LoginsUiTest">
+            <class name="ui.testsUi.LoginsUiTestBase">
                 <methods>
                     <include name="positiveLoginTest"/>
                     <include name="negativeLoginTestInvalidUsername"/>
@@ -20,7 +20,7 @@
     </test>
     <test name="TestCreateProjectUi">
         <classes>
-            <class name="ui.testsUi.ProjectsUiTest"/>
+            <class name="ui.testsUi.ProjectsUiTestBase"/>
         </classes>
     </test>
 </suite>

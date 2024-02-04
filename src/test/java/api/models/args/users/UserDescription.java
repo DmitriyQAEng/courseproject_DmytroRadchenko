@@ -5,7 +5,7 @@ import lombok.*;
 @Data
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UserInfo {
+public class UserDescription {
     @Getter
     @Setter
     @NoArgsConstructor

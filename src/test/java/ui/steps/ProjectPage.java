@@ -1,8 +1,8 @@
 package ui.steps;
 
-import static elements.ProjectElements.*;
-import static elements.ProjectElements.removeProjectField;
-import static elements.TaskElements.confirmButton;
+import static elements.ProjectComponents.*;
+import static elements.ProjectComponents.removeProjectField;
+import static elements.TaskComponents.confirmButton;
 import static ui.steps.LoginPage.loginAsAdmin;
 
 public class ProjectPage {

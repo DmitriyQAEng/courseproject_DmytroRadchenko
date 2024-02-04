@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.*;
 
-public class ProjectElements {
+public class ProjectComponents {
     public static SelenideElement newProjectField(){
         return $(By.xpath("//body/section[1]/section[1]/div[1]/ul[1]/li[1]/a[1]"));
     }

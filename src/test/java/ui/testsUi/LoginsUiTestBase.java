@@ -1,7 +1,7 @@
 package ui.testsUi;
 
 import com.codeborne.selenide.Configuration;
-import config.Config;
+import config.ConfigProperties;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -10,10 +10,10 @@ import ui.methods.RetryAnalyzer;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static elements.LoginElements.*;
+import static elements.UserCredentialsComponents.*;
 import static ui.steps.LoginPage.loginAsAdmin;
 
-public class LoginsUiTest extends BaseTest {
+public class LoginsUiTestBase extends UITestBase {
 
     @BeforeClass
     @Parameters({"browserName", "headless"})
@@ -39,8 +39,8 @@ public class LoginsUiTest extends BaseTest {
         Configuration.browser = browserName;
         Configuration.headless = headless;
         homePage();
-        userField().setValue(Config.getInvalidUserPassword());
-        passwordField().setValue(Config.getPassword());
+        userField().setValue(ConfigProperties.getInvalidUserPassword());
+        passwordField().setValue(ConfigProperties.getPassword());
         rememberMyField().click();
         signInButton().click();
         badUsernamePasswordField().shouldHave(text("Bad username or password"));
@@ -52,8 +52,8 @@ public class LoginsUiTest extends BaseTest {
         Configuration.browser = browserName;
         Configuration.headless = headless;
         homePage();
-        userField().setValue(Config.getUser());
-        passwordField().setValue(Config.getInvalidUserPassword());
+        userField().setValue(ConfigProperties.getUser());
+        passwordField().setValue(ConfigProperties.getInvalidUserPassword());
         rememberMyField().click();
         signInButton().click();
         badUsernamePasswordField().shouldHave(text("Bad username or password"));

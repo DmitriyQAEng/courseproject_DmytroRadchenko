@@ -1,4 +1,4 @@
-package api.models.args.projects;
+package api.models.args.tasks;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
@@ -6,29 +6,30 @@ import lombok.*;
 @Data
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ProjectInfo {
+public class TaskDescription {
+
     @Getter
     @Setter
     @NoArgsConstructor
     @AllArgsConstructor
     @Builder
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static class CreateProjectRequest {
+    public static class CreateTaskRequest {
         private String jsonrpc;
         private String method;
         private long id;
-        private ParamsCreate params;
-
+        ParamsCreate params;
         @Getter
         @Setter
         @NoArgsConstructor
         @AllArgsConstructor
         @Builder
         public static class ParamsCreate {
-            private String name;
+            private String title;
+            private int project_id;
             private String description;
-            private String start_date;
-            private String end_date;
+            private String color_id;
+            private String date_started;
         }
     }
     @Getter
@@ -36,8 +37,7 @@ public class ProjectInfo {
     @NoArgsConstructor
     @AllArgsConstructor
     @Builder
-    @JsonIgnoreProperties(ignoreUnknown = true)
-    public static class RemoveProjectRequest {
+    public static class RemoveTaskRequest {
         private String jsonrpc;
         private String method;
         private long id;
@@ -49,7 +49,7 @@ public class ProjectInfo {
         @AllArgsConstructor
         @Builder
         public static class ParamsRemote {
-            private int project_id;
+            private int task_id;
         }
     }
 }

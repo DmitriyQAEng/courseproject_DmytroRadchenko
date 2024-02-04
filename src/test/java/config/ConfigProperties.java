@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class Config {
+public class ConfigProperties {
     private static Properties properties;
 
     static {
-        try (InputStream input = Config.class.getClassLoader().getResourceAsStream("config.properties")) {
+        try (InputStream input = ConfigProperties.class.getClassLoader().getResourceAsStream("config.properties")) {
             properties = new Properties();
             properties.load(input);
         } catch (IOException e) {
@@ -47,6 +47,9 @@ public class Config {
     }
     public static String getApiToken(){
         return properties.getProperty("API_TOKEN", "c8841f5c5ab7208e3c58e672b555d6250cf9f35e54c23d6c7db37a881843");
+    }
+    public static String getBrowserType() {
+        return properties.getProperty("BROWSER_TYPE", "chrome");
     }
     public static String getApiEndpoint(){
         return properties.getProperty("API_ENDPOINT", "/jsonrpc.php");

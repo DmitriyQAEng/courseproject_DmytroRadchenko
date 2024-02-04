@@ -1,19 +1,19 @@
 package ui.testsUi;
 
-import api.models.dynamic.DynamicProjectTests;
+import api.models.dynamic.ProjectTestDataProvider;
 
 import org.testng.annotations.Test;
 import ui.methods.RetryAnalyzer;
 
-import static elements.ProjectElements.*;
+import static elements.ProjectComponents.*;
 import static ui.steps.LoginPage.loginAsAdmin;
 import static ui.steps.ProjectPage.removeProject;
 import static ui.steps.TaskPage.createAndEditTasks;
 
-public class ProjectsUiTest extends BaseTest {
+public class ProjectsUiTestBase extends UITestBase {
 
     @Test(groups = "UiProjectsTests", priority = 1, retryAnalyzer = RetryAnalyzer.class,
-            dataProvider = "projectData", dataProviderClass = DynamicProjectTests.class)
+            dataProvider = "projectData", dataProviderClass = ProjectTestDataProvider.class)
     public void createProjectTest(String projectName) {
         // Project creation
         loginAsAdmin();
