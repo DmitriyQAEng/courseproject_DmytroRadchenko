@@ -29,7 +29,7 @@ public class ApiTests {
         RestAssured.baseURI = EnvProperties.getBaseUrl();
     }
 
-    @Test(groups = "ApiProjectsTests", priority = 1, dataProvider = "userData", dataProviderClass = UserTestDataProvider.class)
+    @Test(groups = "ApiProjectsTests", priority = 1, dataProvider = "userData", dataProviderClass = CombinedTestDataProvider.class)
     public void createUserAsAdminTest(String userName) {
         UserDescription.CreateUserRequest createUser = UserDescription.CreateUserRequest.builder()
                 .jsonrpc("2.0")
@@ -45,7 +45,7 @@ public class ApiTests {
         logger.info("User created with Result: " + userResult);
     }
 
-    @Test(groups = "ApiProjectsTests", priority = 2, dataProvider = "projectData", dataProviderClass = ProjectTestDataProvider.class)
+    @Test(groups = "ApiProjectsTests", priority = 2, dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
     public void createProjectTest(String projectName) {
         ProjectDescription.CreateProjectRequest createProject = ProjectDescription.CreateProjectRequest.builder()
                 .jsonrpc("2.0")
@@ -60,7 +60,7 @@ public class ApiTests {
         logger.info("Project created with Result: " + projectResult);
     }
 
-    @Test(groups = "ApiProjectsTests", priority = 3, dataProvider = "taskData", dataProviderClass = TaskTestDataProvider.class)
+    @Test(groups = "ApiProjectsTests", priority = 3, dataProvider = "taskData", dataProviderClass = CombinedTestDataProvider.class)
     public void createTaskTest(String taskName) {
         TaskDescription.CreateTaskRequest createTask = TaskDescription.CreateTaskRequest.builder()
                 .jsonrpc("2.0")

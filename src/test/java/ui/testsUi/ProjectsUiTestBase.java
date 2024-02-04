@@ -1,6 +1,6 @@
 package ui.testsUi;
 
-import api.models.dataprovider.ProjectTestDataProvider;
+import api.models.dataprovider.CombinedTestDataProvider;
 
 import org.testng.annotations.Test;
 import ui.methods.RetryAnalyzer;
@@ -13,7 +13,7 @@ import static ui.stepsselenide.TaskPage.createAndEditTasks;
 public class ProjectsUiTestBase extends UITestBase {
 
     @Test(groups = "UiProjectsTests", priority = 1, retryAnalyzer = RetryAnalyzer.class,
-            dataProvider = "projectData", dataProviderClass = ProjectTestDataProvider.class)
+            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
     public void createProjectTest(String projectName) {
         // Project creation
         loginAsAdmin();
