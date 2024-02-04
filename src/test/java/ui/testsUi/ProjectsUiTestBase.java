@@ -1,14 +1,14 @@
 package ui.testsUi;
 
-import api.models.dynamic.ProjectTestDataProvider;
+import api.models.dataprovider.ProjectTestDataProvider;
 
 import org.testng.annotations.Test;
 import ui.methods.RetryAnalyzer;
 
 import static elements.ProjectComponents.*;
-import static ui.steps.LoginPage.loginAsAdmin;
-import static ui.steps.ProjectPage.removeProject;
-import static ui.steps.TaskPage.createAndEditTasks;
+import static ui.stepsselenide.LoginPage.loginAsAdmin;
+import static ui.stepsselenide.ProjectPage.removeProject;
+import static ui.stepsselenide.TaskPage.createAndEditTasks;
 
 public class ProjectsUiTestBase extends UITestBase {
 

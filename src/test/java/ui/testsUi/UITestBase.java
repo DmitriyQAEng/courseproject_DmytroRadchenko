@@ -1,6 +1,7 @@
 package ui.testsUi;
 
 import com.codeborne.selenide.Configuration;
+
 import config.ConfigProperties;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

@@ -1,4 +1,4 @@
-package ui.steps;
+package ui.stepsselenide;
 
 import config.ConfigProperties;
 

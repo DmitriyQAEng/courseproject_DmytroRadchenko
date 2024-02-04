@@ -1,4 +1,4 @@
-package api.methods;
+package api.apimethods;
 
 public class ProjectMethods {
     public final static String CREATE_PROJECT = "createProject";

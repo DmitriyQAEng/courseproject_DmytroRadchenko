@@ -11,7 +11,7 @@ import ui.methods.RetryAnalyzer;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static elements.UserCredentialsComponents.*;
-import static ui.steps.LoginPage.loginAsAdmin;
+import static ui.stepsselenide.LoginPage.loginAsAdmin;
 
 public class LoginsUiTestBase extends UITestBase {
 

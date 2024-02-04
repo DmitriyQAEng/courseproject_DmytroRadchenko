@@ -1,9 +1,9 @@
-package ui.steps;
+package ui.stepsselenide;
 
 import static elements.ProjectComponents.*;
 import static elements.ProjectComponents.removeProjectField;
 import static elements.TaskComponents.confirmButton;
-import static ui.steps.LoginPage.loginAsAdmin;
+import static ui.stepsselenide.LoginPage.loginAsAdmin;
 
 public class ProjectPage {
     public static void removeProject(){

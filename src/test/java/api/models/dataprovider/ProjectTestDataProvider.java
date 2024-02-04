@@ -1,4 +1,4 @@
-package api.models.dynamic;
+package api.models.dataprovider;
 
 import org.testng.annotations.DataProvider;
 

@@ -1,4 +1,4 @@
-package api.methods;
+package api.apimethods;
 
 public class UserMethods {
     public final static String CREATE_USER = "createUser";

@@ -1,4 +1,4 @@
-package api.methods;
+package api.apimethods;
 
 public class TaskMethods {
     public final static String CREATE_TASK = "createTask";
