@@ -1,4 +1,4 @@
-package api.models.dataprovider;
+package api.models;
 
 import org.testng.annotations.DataProvider;
 

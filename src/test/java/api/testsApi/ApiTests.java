@@ -1,5 +1,6 @@
 package api.testsApi;
 
+import api.models.CombinedTestDataProvider;
 import api.models.args.result.Result;
 import api.models.args.projects.ProjectDescription;
 import api.models.args.tasks.TaskDescription;
@@ -13,7 +14,7 @@ import static api.apimethods.UserMethods.CREATE_USER;
 import static api.apimethods.UserMethods.DELETE_USER;
 import static api.steps.BaseApiSteps.performAuthorizedRequest;
 import java.util.logging.Logger;
-import api.models.dataprovider.*;
+
 import utils.EnvProperties;
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeMethod;

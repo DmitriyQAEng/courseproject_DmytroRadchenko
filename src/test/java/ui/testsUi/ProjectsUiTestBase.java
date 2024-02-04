@@ -1,6 +1,6 @@
 package ui.testsUi;
 
-import api.models.dataprovider.CombinedTestDataProvider;
+import api.models.CombinedTestDataProvider;
 
 import org.testng.annotations.Test;
 import ui.methods.RetryAnalyzer;
