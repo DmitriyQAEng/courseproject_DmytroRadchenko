@@ -40,7 +40,7 @@ code {
 <body>
 
 <div class="container">
-    <h1>Individual Project Dmytro Radchenko</h1>
+    <h1>Individual Project Mykola Dudko</h1>
     <h2>Project for Testing Kanboard 12</h2>
     <p>The project is created for automated testing of project management software – Kanboard. Technologies and libraries such as testNG, Selenide, Rest Assured, and Allure are used.</p>
 
