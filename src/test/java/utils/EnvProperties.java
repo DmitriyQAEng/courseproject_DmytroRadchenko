@@ -1,14 +1,14 @@
-package config;
+package utils;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class ConfigProperties {
+public class EnvProperties {
     private static Properties properties;
 
     static {
-        try (InputStream input = ConfigProperties.class.getClassLoader().getResourceAsStream("config.properties")) {
+        try (InputStream input = EnvProperties.class.getClassLoader().getResourceAsStream("config.properties")) {
             properties = new Properties();
             properties.load(input);
         } catch (IOException e) {

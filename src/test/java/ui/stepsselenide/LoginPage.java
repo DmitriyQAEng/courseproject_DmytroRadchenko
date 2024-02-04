@@ -1,16 +1,16 @@
 package ui.stepsselenide;
 
-import config.ConfigProperties;
+import utils.EnvProperties;
 
 import static com.codeborne.selenide.Selenide.open;
-import static ui.elements.elements.UserCredentialsComponents.*;
+import static ui.elements.UserCredentialsComponents.*;
 
 
 public class LoginPage{
     public static void loginAsAdmin() {
-        open(ConfigProperties.getHomePage());
-        userField().setValue(ConfigProperties.getUser());
-        passwordField().setValue(ConfigProperties.getPassword());
+        open(EnvProperties.getHomePage());
+        userField().setValue(EnvProperties.getUser());
+        passwordField().setValue(EnvProperties.getPassword());
         rememberMyField();
         signInButton().click();
     }

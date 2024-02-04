@@ -2,7 +2,7 @@ package ui.testsUi;
 
 import com.codeborne.selenide.Configuration;
 
-import config.ConfigProperties;
+import utils.EnvProperties;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class UITestBase {
     @BeforeClass
     public void setUpClass() {
-        String browserType = ConfigProperties.getBrowserType().toLowerCase();
+        String browserType = EnvProperties.getBrowserType().toLowerCase();
         switch (browserType) {
             case "firefox":
                 Configuration.browser = "firefox";
@@ -28,13 +28,13 @@ public class UITestBase {
                 throw new IllegalArgumentException("Unsupported browser type: " + browserType);
         }
 
-        Configuration.baseUrl = ConfigProperties.getBaseUrl();
-        Configuration.browserSize = ConfigProperties.getBrowserSize();
+        Configuration.baseUrl = EnvProperties.getBaseUrl();
+        Configuration.browserSize = EnvProperties.getBrowserSize();
         Configuration.fastSetValue = true;
     }
 
     public static void homePage() {
-        open(ConfigProperties.getHomePage());
+        open(EnvProperties.getHomePage());
     }
 
     @AfterClass(alwaysRun = true)
