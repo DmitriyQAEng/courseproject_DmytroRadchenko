@@ -2,12 +2,12 @@ package ui.testsUi;
 
 import api.models.CombinedTestDataProvider;
 import com.codeborne.selenide.Configuration;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import ui.methods.RetryAnalyzer;
 
 public class TaskUiTestBase extends UITestBase {
