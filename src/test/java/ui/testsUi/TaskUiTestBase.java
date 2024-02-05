@@ -10,25 +10,25 @@ import static ui.stepsselenide.ProjectPage.removeProject;
 import static ui.stepsselenide.TaskPage.createAndEditTasks;
 public class TaskUiTestBase extends UITestBase {
 
-//    @Test(groups = "UiTasksTests", priority = 1, retryAnalyzer = RetryAnalyzer.class,
-//            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
-//    public void createTaskTest(String taskName) {
-//        // Task creation
+    @Test(groups = "UiTasksTests", priority = 1, retryAnalyzer = RetryAnalyzer.class,
+            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
+    public void createTaskTest(String taskName) {
+        // Task creation
+
+    }
+
+    @Test(groups = "UiTasksTests", priority = 2, retryAnalyzer = RetryAnalyzer.class,
+            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
+    public void closeTaskTest(String taskName){
+            // Task closing
+
+        }
 
 
-
-//    @Test(groups = "UiTasksTests", priority = 2, retryAnalyzer = RetryAnalyzer.class,
-//            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
-//    public void closeTaskTest(String taskName) {
-//        // Task closing
-
-
-
-
-    //    @Test(groups = "UiTasksTests", priority = 3, retryAnalyzer = RetryAnalyzer.class,
-//            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
-//    public void addTaskTest(String taskName) {
-//        // Task adding
-
+        @Test(groups = "UiTasksTests", priority = 3, retryAnalyzer = RetryAnalyzer.class,
+            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
+    public void addTaskTest(String taskName){
+            // Task adding
+        }
 }
 

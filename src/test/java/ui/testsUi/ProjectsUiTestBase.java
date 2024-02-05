@@ -12,9 +12,9 @@ import static ui.stepsselenide.TaskPage.createAndEditTasks;
 
 public class ProjectsUiTestBase extends UITestBase {
 
-//    @Test(groups = "UiProjectsTests", priority = 1, retryAnalyzer = RetryAnalyzer.class,
-//            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
-//    public void createProjectTest(String projectName) {
+    @Test(groups = "UiProjectsTests", priority = 1, retryAnalyzer = RetryAnalyzer.class,
+            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
+    public void createProjectTest(String projectName) {
 //        // Project creation
 //        loginAsAdmin();
 //        newProjectField().click();
@@ -25,10 +25,6 @@ public class ProjectsUiTestBase extends UITestBase {
 //        saveField().click();
 //        System.out.println("Project Name: " + projectName);
 
-
-
-
-
-
+    }
     }
 
