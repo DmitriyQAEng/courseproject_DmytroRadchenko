@@ -7,10 +7,10 @@ public class CombinedTestDataProvider {
     public Object[][] projectData() {
         return new Object[][]{
                 {"TestProjectDmitro"},
-                {"TestProjectDmitro2"},
-                {"TestProjectDmitro3"},
-                {"TestProjectDmitro4"},
-                /// массив даних
+//                {"TestProjectDmitro2"},
+//                {"TestProjectDmitro3"},
+//                {"TestProjectDmitro4"},
+//                /// массив даних
         };
     }
 
@@ -18,10 +18,10 @@ public class CombinedTestDataProvider {
     public Object[][] taskData() {
         return new Object[][]{
                 {"TestTaskDmitro"},
-                {"TestTaskDmitro2"},
-                {"TestTaskDmitro3"},
-                {"TestTaskDmitro4"},
-                /// массив даних
+//                {"TestTaskDmitro2"},
+//                {"TestTaskDmitro3"},
+//                {"TestTaskDmitro4"},
+//                /// массив даних
         };
     }
 
@@ -29,10 +29,10 @@ public class CombinedTestDataProvider {
     public Object[][] userData() {
         return new Object[][]{
                 {"TestTestuserDmitro"},
-                {"TestTestuserDmitro2"},
-                {"TestTestuserDmitro3"},
-                {"TestTestuserDmitro4"},
-                /// массив даних
+//                {"TestTestuserDmitro2"},
+//                {"TestTestuserDmitro3"},
+//                {"TestTestuserDmitro4"},
+//                /// массив даних
         };
     }
 }

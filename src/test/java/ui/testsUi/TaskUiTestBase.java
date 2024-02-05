@@ -6,9 +6,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import ui.elements.TaskComponents;
 import ui.methods.RetryAnalyzer;
 
 import static ui.elements.ProjectComponents.*;
+import static ui.elements.TaskComponents.addNewTaskField;
+import static ui.elements.TaskComponents.nameTaskField;
 import static ui.stepsselenide.LoginPage.loginAsAdmin;
 import static ui.stepsselenide.ProjectPage.removeProject;
 import static ui.stepsselenide.TaskPage.createAndEditTasks;
@@ -22,7 +25,7 @@ public class TaskUiTestBase extends UITestBase {
     @Test(groups = "UiTasksTests", priority = 1, retryAnalyzer = RetryAnalyzer.class,
             dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
     public void createTaskTest(String taskName) {
-        // Task creation
+
 
     }
 
