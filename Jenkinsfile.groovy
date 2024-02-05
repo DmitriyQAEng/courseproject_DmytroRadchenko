@@ -21,7 +21,7 @@ pipeline {
         stage("Run Tests") {
             steps {
                 script {
-                    sh "./mvnw test"
+                    sh "./mvnw test  -Dsuite=FullTest.xml"
                 }
             }
         }
