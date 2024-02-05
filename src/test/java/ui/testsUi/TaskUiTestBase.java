@@ -26,14 +26,11 @@ public class TaskUiTestBase extends UITestBase {
             dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
     public void createTaskTest(String taskName) {
         logger.info("Starting createTaskTest with task name: {}", taskName);
-
-        // Add your test logic here
-        // For example:
-        // loginAsAdmin();
-        // createTask(taskName);
-        // assertTaskCreatedSuccessfully();
-
-        // Simulating test logic completion
+//        loginAsAdmin();
+//        dropdownProjectField().click();
+//        addNewTaskField().click();
+//        nameTaskField().setValue(taskName);
+//        saveField().click();
         logger.info("createTaskTest completed for task: {}", taskName);
     }
 

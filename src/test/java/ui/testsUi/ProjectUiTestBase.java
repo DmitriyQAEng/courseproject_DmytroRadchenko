@@ -29,8 +29,6 @@ public class ProjectUiTestBase extends UITestBase {
             dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
     public void createProjectTest(String projectName) {
         logger.info("Starting createProjectTest with project name: {}", projectName);
-
-
          loginAsAdmin();
          newProjectField().click();
          formNameProjectField().setValue(projectName);
