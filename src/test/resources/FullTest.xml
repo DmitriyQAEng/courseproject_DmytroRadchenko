@@ -23,6 +23,17 @@
             <class name="ui.testsUi.ProjectUiTestBase"/>
         </classes>
     </test>
+    <test
+            name="UiTasksTest">
+        <classes>
+            <class name="ui.testsUi.TaskUiTestBase"/>
+            <methods>
+                <include name="createTaskTest"/>
+                <include name="closeTaskTest"/>
+                <include name="addTaskTest"/>
+            </methods>
+        </classes>
+    </test>
 </suite>
 
 
