@@ -10,6 +10,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ui.methods.RetryAnalyzer;
 
+import static ui.elements.ProjectComponents.*;
+import static ui.stepsselenide.LoginPage.loginAsAdmin;
+
 public class ProjectUiTestBase extends UITestBase {
 
     private static final Logger logger = LogManager.getLogger(ProjectUiTestBase.class);
@@ -27,18 +30,16 @@ public class ProjectUiTestBase extends UITestBase {
     public void createProjectTest(String projectName) {
         logger.info("Starting createProjectTest with project name: {}", projectName);
 
-        // Add your test logic here
-        // For example:
-        // loginAsAdmin();
-        // newProjectField().click();
-        // formNameProjectField().setValue(projectName);
-        // identifierProjectField().setValue("MYPROJECTS");
-        // columnTaskProjectField().click();
-        // formTaskLimitField().setValue("4");
-        // saveField().click();
-        // System.out.println("Project Name: " + projectName);
 
-        // Simulating test logic completion
+         loginAsAdmin();
+         newProjectField().click();
+         formNameProjectField().setValue(projectName);
+         identifierProjectField().setValue("MYPROJECTS");
+         columnTaskProjectField().click();
+         formTaskLimitField().setValue("4");
+         saveField().click();
+         System.out.println("Project Name: " + projectName);
+
         logger.info("Project creation completed for project: {}", projectName);
     }
 }
