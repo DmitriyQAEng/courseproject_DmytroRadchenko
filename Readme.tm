@@ -11,7 +11,7 @@ Installation and Running Instructions:
 
 Clone the repository:
 
-git clone https://github.com/Yroslavadudko/individualProjectMykolaDudko.git
+git clone https://github.com/DmitriyQAEng/courseproject_DmytroRadchenko.git
 
 Ensure that Docker is installed on your machine.
 
