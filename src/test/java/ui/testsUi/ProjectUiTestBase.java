@@ -5,12 +5,7 @@ import api.models.CombinedTestDataProvider;
 import org.testng.annotations.Test;
 import ui.methods.RetryAnalyzer;
 
-import static ui.elements.ProjectComponents.*;
-import static ui.stepsselenide.LoginPage.loginAsAdmin;
-import static ui.stepsselenide.ProjectPage.removeProject;
-import static ui.stepsselenide.TaskPage.createAndEditTasks;
-
-public class ProjectsUiTestBase extends UITestBase {
+public class ProjectUiTestBase extends UITestBase {
 
     @Test(groups = "UiProjectsTests", priority = 1, retryAnalyzer = RetryAnalyzer.class,
             dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)

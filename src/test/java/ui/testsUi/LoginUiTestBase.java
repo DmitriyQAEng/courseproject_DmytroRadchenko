@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static ui.elements.UserCredentialsComponents.*;
 import static ui.stepsselenide.LoginPage.loginAsAdmin;
 
-public class LoginsUiTestBase extends UITestBase {
+public class LoginUiTestBase extends UITestBase {
 
     @BeforeClass
     @Parameters({"browserName", "headless"})
