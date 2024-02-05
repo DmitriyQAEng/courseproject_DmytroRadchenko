@@ -54,8 +54,8 @@ public class TaskUiTestBase extends UITestBase {
 
     @Test(groups = "UiTasksTests", priority = 3, retryAnalyzer = RetryAnalyzer.class,
             dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
-    public void addTaskTest(String taskName) {
-        logger.info("Starting addTaskTest with task name: {}", taskName);
+    public void addTaskTest(String newcommenttexttest) {
+        logger.info("Starting addcommentTaskTest with comment text: {}", newcommenttexttest);
 
         // Add your test logic here
         // For example:
@@ -64,6 +64,6 @@ public class TaskUiTestBase extends UITestBase {
         // assertTaskAddedSuccessfully();
 
         // Simulating test logic completion
-        logger.info("addTaskTest completed for task: {}", taskName);
+        logger.info("addTaskTest completed for task: {}", newcommenttexttest);
     }
 }
