@@ -52,7 +52,7 @@ public class TaskUiTestBase extends UITestBase {
     @Test(groups = "UiTasksTests", priority = 3, retryAnalyzer = RetryAnalyzer.class,
             dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
     public void addTaskTest(String newcommenttexttest) {
-        logger.info("Starting addcommentTaskTest with comment text: {}", newcommenttexttest);
+        logger.info("Starting add comment TasksTests with text: {}", newcommenttexttest);
 
         // Add your test logic here
         // For example:
