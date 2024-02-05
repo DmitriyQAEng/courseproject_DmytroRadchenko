@@ -2,13 +2,15 @@ package ui.testsUi;
 
 import api.models.CombinedTestDataProvider;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.Assert;
+import org.testng.annotations.*;
+import ui.elements.ProjectComponents;
 import ui.methods.RetryAnalyzer;
+import ui.stepsselenide.LoginPage;
+import ui.stepsselenide.TaskPage;
 
 public class TaskUiTestBase extends UITestBase {
 
@@ -23,44 +25,47 @@ public class TaskUiTestBase extends UITestBase {
     }
 
     @Test(groups = "UiTasksTests", priority = 1, retryAnalyzer = RetryAnalyzer.class,
-            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
-    public void createTaskTest(String taskName) {
+            dataProvider = "taskData", dataProviderClass = CombinedTestDataProvider.class)
+    public void createTaskTest(String taskName) throws InterruptedException {
         logger.info("Starting createTaskTest with task name: {}", taskName);
-//        loginAsAdmin();
-//        dropdownProjectField().click();
-//        addNewTaskField().click();
-//        nameTaskField().setValue(taskName);
-//        saveField().click();
+
+        LoginPage.loginAsAdmin();
+        ProjectComponents.myProjects("TestProjectDmitro").click();
+        TaskPage.addNewTask(taskName);
+        Selenide.sleep(300);
+        Assert.assertTrue(TaskPage.isTaskDisplayed(taskName));
+
         logger.info("createTaskTest completed for task: {}", taskName);
     }
 
+    @Test(groups = "UiTasksTests", priority = 1, retryAnalyzer = RetryAnalyzer.class,
+            dataProvider = "taskData", dataProviderClass = CombinedTestDataProvider.class)
+    public void editTaskTest(String taskName) throws InterruptedException {
+        logger.info("Starting editTaskTest with task name: {}", taskName);
+
+        LoginPage.loginAsAdmin();
+        ProjectComponents.myProjects("TestProjectDmitro").click();
+        TaskPage.editTaskParameters(taskName,
+                "Close this task!",
+                "Purple",
+                "admin",
+                1);
+
+        logger.info("editTaskTest completed for task: {}", taskName);
+    }
+
+
     @Test(groups = "UiTasksTests", priority = 2, retryAnalyzer = RetryAnalyzer.class,
-            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
+            dataProvider = "taskData", dataProviderClass = CombinedTestDataProvider.class)
     public void closeTaskTest(String taskName) {
         logger.info("Starting closeTaskTest with task name: {}", taskName);
 
-        // Add your test logic here
-        // For example:
-        // loginAsAdmin();
-        // closeTask(taskName);
-        // assertTaskClosedSuccessfully();
+        LoginPage.loginAsAdmin();
+        ProjectComponents.myProjects("TestProjectDmitro").click();
+        TaskPage.closeCreatedTask(taskName);
+        Selenide.sleep(300);
+        Assert.assertFalse(TaskPage.isTaskDisplayed(taskName));
 
-        // Simulating test logic completion
         logger.info("closeTaskTest completed for task: {}", taskName);
-    }
-
-    @Test(groups = "UiTasksTests", priority = 3, retryAnalyzer = RetryAnalyzer.class,
-            dataProvider = "projectData", dataProviderClass = CombinedTestDataProvider.class)
-    public void addTaskTest(String newcommenttexttest) {
-        logger.info("Starting add comment TasksTests with text: {}", newcommenttexttest);
-
-        // Add your test logic here
-        // For example:
-        // loginAsAdmin();
-        // addTask(taskName);
-        // assertTaskAddedSuccessfully();
-
-        // Simulating test logic completion
-        logger.info("addTaskTest completed for task: {}", newcommenttexttest);
     }
 }

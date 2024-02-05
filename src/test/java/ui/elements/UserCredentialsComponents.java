@@ -29,4 +29,10 @@ public class UserCredentialsComponents {
     public static SelenideElement activationUsernameField(){
         return $(By.xpath("//body/div[@id='dropdown']/ul[1]/li[1]/strong[1]"));
     }
+    public static SelenideElement dashboardLogo(){
+        return $(By.xpath("//a[@title='Dashboard']"));
+    }
+    public static SelenideElement dashboardPageTitle(){
+        return $(By.xpath("//span[contains(text(), 'Dashboard') and @class='title']"));
+    }
 }

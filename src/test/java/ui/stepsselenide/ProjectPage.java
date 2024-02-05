@@ -6,9 +6,8 @@ import static ui.elements.TaskComponents.confirmButton;
 import static ui.stepsselenide.LoginPage.loginAsAdmin;
 
 public class ProjectPage {
-    public static void removeProject(){
-        loginAsAdmin();
-        myProjects().click();
+    public static void removeProject(String projectName){
+        myProjects(projectName).click();
         dropdownProjectField().click();
         configureProject().click();
         removeProjectField().click();

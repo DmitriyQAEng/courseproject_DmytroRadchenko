@@ -29,6 +29,9 @@ public class ProjectComponents {
     public static SelenideElement myProjects(){
         return $(By.xpath("//a[contains(text(),'TestProjectDmitro')]"));
     }
+    public static SelenideElement myProjects(String text){
+        return $(By.xpath("//a[contains(text(),'"+text+"')]"));
+    }
     public static SelenideElement configureProject(){
         return $(By.xpath("//body/div[@id='dropdown']/ul[1]/li[10]/a[1]"));
     }
