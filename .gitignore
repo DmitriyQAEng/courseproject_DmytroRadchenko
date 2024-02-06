@@ -28,3 +28,7 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+build/
+allure-results/
+.allure/

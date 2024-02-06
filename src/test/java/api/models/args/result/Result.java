@@ -2,8 +2,6 @@ package api.models.args.result;
 
 import lombok.*;
 
-@Getter
-@Setter
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,7 +15,7 @@ public class Result<T> {
         return new Result<T>();
     }
 
-    public int User_id() {
+    public int getUserId() {
         if (result instanceof Integer) {
             return (Integer) result;
         } else {
