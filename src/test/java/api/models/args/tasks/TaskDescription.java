@@ -1,6 +1,7 @@
 package api.models.args.tasks;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 @Data
@@ -26,7 +27,8 @@ public class TaskDescription {
         @Builder
         public static class ParamsCreate {
             private String title;
-            private int project_id;
+            @JsonProperty("project_id")
+            private int projectId;
             private String description;
             private String color_id;
             private String date_started;

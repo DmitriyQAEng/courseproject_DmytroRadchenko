@@ -67,7 +67,7 @@ public class ApiTests {
                 .jsonrpc("2.0")
                 .method(CREATE_TASK)
                 .id(EnvProperties.getTaskId())
-                .params(TaskDescription.CreateTaskRequest.ParamsCreate.builder().project_id(projectResult).title(taskName)
+                .params(TaskDescription.CreateTaskRequest.ParamsCreate.builder().projectId(projectResult).title(taskName)
                         .description("Testing API").color_id("green").date_started("2024-01-18").build())
                 .build();
         Result result = performAuthorizedRequest(createTask);
