@@ -9,7 +9,7 @@ import io.restassured.response.Response;
 import static api.steps.StatusCodeSteps.checkStatusCode;
 
 public class BaseApiSteps {
-    public static Result<?> performAuthorizedRequest(Object requestObject) {
+    public static Result performAuthorizedRequest(Object requestObject) {
         Response response = RestAssured.given()
                 .auth().preemptive().basic(EnvProperties.getApiLogin(), EnvProperties.getApiToken())
                 .contentType(ContentType.JSON)

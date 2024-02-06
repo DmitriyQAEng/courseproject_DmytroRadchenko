@@ -41,7 +41,7 @@ public class ApiTests {
                         .name(userName).role(MANAGER.getRole()).email("djdmonqa@gmail.com").build())
                 .build();
         Result result = performAuthorizedRequest(createUser);
-        userResult = result.User_id();
+        userResult = (int) result.getResult();
         logger.info("Creating new User: " + userName);
         logger.info("User created with Result: " + userResult);
     }
@@ -56,7 +56,7 @@ public class ApiTests {
                         .start_date("2024-01-01").end_date("2024-02-05").build())
                 .build();
         Result result = performAuthorizedRequest(createProject);
-        projectResult = result.Project_id();
+        projectResult = (int) result.getResult();
         logger.info("Creating new Project: " + projectName);
         logger.info("Project created with Result: " + projectResult);
     }
@@ -71,7 +71,7 @@ public class ApiTests {
                         .description("Testing API").color_id("green").date_started("2024-01-18").build())
                 .build();
         Result result = performAuthorizedRequest(createTask);
-        taskResult = result.Task_id();
+        taskResult = (int) result.getResult();
         logger.info("Creating new Task: " + taskName);
         logger.info("Task created with Result: " + taskResult);
     }
@@ -85,7 +85,7 @@ public class ApiTests {
                 .params(TaskDescription.RemoveTaskRequest.ParamsRemote.builder().task_id(taskResult).build())
                 .build();
         Result result = performAuthorizedRequest(removeTask);
-        int resultWithId = result.Task_id();
+        Object resultWithId = result.getResult();
         boolean taskRemovedResult = (boolean) result.getResult();
         logger.info("Task removed with Result: " + resultWithId);
         logger.info("Task removed result: " + taskRemovedResult);
@@ -100,7 +100,7 @@ public class ApiTests {
                 .params(ProjectDescription.RemoveProjectRequest.ParamsRemote.builder().project_id(projectResult).build())
                 .build();
         Result result = performAuthorizedRequest(removeProject);
-        int resultWithId = result.Project_id();
+        int resultWithId = (int) result.getResult();
         boolean projectRemovedResult = (boolean) result.getResult();
         logger.info("Project removed with Result: " + resultWithId);
         logger.info("Project removed result: " + projectRemovedResult);
@@ -115,9 +115,7 @@ public class ApiTests {
                 .params(UserDescription.RemoveUserRequest.ParamsRemote.builder().user_id(userResult).build())
                 .build();
         Result result = performAuthorizedRequest(removeUser);
-        int resultWithId = result.User_id();
         boolean userRemovedResult = (boolean) result.getResult();
-        logger.info("User removed with Result: " + resultWithId);
         logger.info("User removed result: " + userRemovedResult);
     }
 }

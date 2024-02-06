@@ -5,38 +5,12 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Result<T> {
+public class Result {
     private String jsonrpc;
-    private T result;
+    private Object result;
     private String error;
     private int id;
 
-    public static <T> Result<T> of(Class<T> type) {
-        return new Result<T>();
-    }
-
-    public int getUserId() {
-        if (result instanceof Integer) {
-            return (Integer) result;
-        } else {
-            return 0;
-        }
-    }
-
-    public int Project_id() {
-        if (result instanceof Integer) {
-            return (Integer) result;
-        } else {
-            return 0;
-        }
-    }
-    public int Task_id() {
-        if (result instanceof Integer) {
-            return (Integer) result;
-        } else {
-            return 0;
-        }
-    }
 }
 
 
